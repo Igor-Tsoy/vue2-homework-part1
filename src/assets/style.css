@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.userList {
+  width: 500px;
+  padding: 0 30px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.1);
+}
+
+.userList__itemContainer {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid #999
+}
+
+.userList__itemContainer:first-child {
+  border-top: none;
+}
+
+.userList__image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+
+.userList__description {
+  
+}
+
+.userList__username {
+  margin-bottom: 10px;
+}
