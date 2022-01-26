@@ -8,12 +8,6 @@ import {
 } from "snabbdom";
 
 import './assets/style.css';
-import './assets/img/1.jpg'
-import './assets/img/2.jpg'
-import './assets/img/3.jpg'
-import './assets/img/4.jpg'
-import './assets/img/5.jpg'
-import './assets/img/6.jpg'
 
 const patch = init([
   classModule,
@@ -57,13 +51,16 @@ const userList = [
   }
 ]
 
+function getImageUrl(index) {
+  return new URL(`./assets/img/${index + 1}.jpg`, import.meta.url).href
+}
 
 
-const usersNode = userList.map((currentUser) => {
+const usersNode = userList.map((currentUser, index) => {
   const userNode = [
     h('article.userList__itemContainer', null, [
       h('img.userList__image', {props: {
-        src: currentUser.imgPath
+        src: getImageUrl(index)
       }}),
       h('div.userList__description', null, [
         h('h3.userList__username', currentUser.username),
